@@ -6,6 +6,7 @@
     "scripts": {
         "build": "hardhat compile",
         "run-node": "hardhat node",
+        "test": "hardhat test",
         "deploy": "hardhat run scripts/deploy.ts"
     },
     "repository": {

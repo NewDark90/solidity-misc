@@ -34,6 +34,7 @@ contract IThinkYouArePrettyCoolToken is IERC20, IERC20Metadata {
     function symbol() external view override returns (string memory) { return _symbol; }
     function decimals() external view override returns (uint8) { return _decimals; }
     function totalSupply() external view override returns (uint256) { return _totalSupply; }
+    function getMainOwner() external view returns (address) { return _mainOwner; }
 
     function balanceOf(address account) external view override returns (uint256) {
         return _balances[account];
