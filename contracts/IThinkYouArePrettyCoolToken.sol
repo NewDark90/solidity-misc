@@ -8,15 +8,12 @@ import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 contract IThinkYouArePrettyCoolToken is IERC20, IERC20Metadata {
 
     mapping(address => uint256) private _balances;
-
     mapping(address => mapping(address => uint256)) private _allowances;
 
     uint256 private _totalSupply = 100000000000;
-
     string private _name = "I think you are pretty cool, The Token";
     string private _symbol = "YouAreCool";
     uint8 private _decimals = 0;
-
     address private _mainOwner;
 
     /**
@@ -101,7 +98,9 @@ contract IThinkYouArePrettyCoolToken is IERC20, IERC20Metadata {
      *
      * ALWAYS RETURNS 0
      */
-    function allowance(address /*owner*/, address /*spender*/) external pure override returns (uint256) { return 0; }
+    function allowance(address /*owner*/, address /*spender*/) external pure override returns (uint256) {
+        return 0;
+    }
 
     /**
      * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
@@ -119,7 +118,9 @@ contract IThinkYouArePrettyCoolToken is IERC20, IERC20Metadata {
      *
      * ALWAYS RETURNS FALSE
      */
-    function approve(address /*spender*/, uint256 /*amount*/) external pure override returns (bool) { return false; }
+    function approve(address /*spender*/, uint256 /*amount*/) external pure override returns (bool) {
+        return false;
+    }
 
     /**
      * @dev Moves `amount` tokens from `from` to `to` using the
