@@ -7,7 +7,8 @@
         "build": "hardhat compile",
         "run-node": "hardhat node",
         "test": "hardhat test",
-        "deploy": "hardhat run scripts/deploy.ts"
+        "deploy": "hardhat run scripts/deploy.ts",
+        "deploy-cooltoken-testnet": "hardhat run scripts/IThinkYouArePrettyCoolToken/deploy.ts --network arbitrum-rinkeby"
     },
     "repository": {
         "type": "git",

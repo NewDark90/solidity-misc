@@ -24,8 +24,18 @@ const config: HardhatUserConfig = {
         },
         ropsten: {
             url: process.env.ROPSTEN_URL || "",
-            accounts:
-                process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+            chainId: 3,
+            accounts: process.env.PRIVATE_KEY_TESTNET !== undefined ? [process.env.PRIVATE_KEY_TESTNET] : [],
+        },
+        sepolia: {
+            url: process.env.SEPOLIA_URL || "",
+            chainId: 11155111,
+            accounts: process.env.PRIVATE_KEY_TESTNET !== undefined ? [process.env.PRIVATE_KEY_TESTNET] : [],
+        },
+        "arbitrum-rinkeby": {
+            url: process.env.ARBITRUM_RINKEBY_URL || "",
+            chainId: 421611,
+            accounts: process.env.PRIVATE_KEY_TESTNET !== undefined ? [process.env.PRIVATE_KEY_TESTNET] : [],
         },
     },
     paths: {
